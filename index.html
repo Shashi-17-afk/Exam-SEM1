@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <style type="text/css">
+        .drop {
+            color: gray;
+        }
+
+        .drop:hover {
+            color: cornflowerblue;
+        }
+
+        .profile{
+            margin-left: 20px;
+        }
+
+        .main{
+            display: grid;
+            grid-template-columns: 6fr 6fr;
+        }
+        
+        .title{
+            font-size: 50px;
+            font-weight: bold;
+            margin-top: 160px;
+            margin-left: 40px;
+        }
+
+        .tick{
+            margin-left: 30px;
+        }
+
+        .start{
+            margin-left: 25px; 
+            border-radius: 5px;
+            color: rgb(225, 67, 67);
+            background-color:rgb(231, 206, 206);
+            height: 45px; width: 125px;
+            font-weight: bold;
+            transition: 0.5s;
+        }
+        .start:hover{
+            background-color: red;
+            color: white;
+        }
+
+        .card{
+            margin-left: 20px;
+        }
+
+        a{
+            font-weight: bold;
+        }
+
+        .Browse{
+            justify-content: space-evenly;
+            background-color: ;
+        }
+
+        .name{
+            margin-top: 30px;
+            background-color: rgb(215, 215, 255);
+            width: 600px;
+            margin-left: 330px;
+        }
+
+
+        footer{
+            display: grid;
+            grid-template-columns: 3fr 3fr 3fr 3fr;
+            margin-top: 10px;
+            padding: 5px;           
+            background-color: white;
+            color: black;
+            font-family: Arial;
+            font-size: 15px;
+            margin-top: 170px;
+          }
+            
+        .nihaal{
+        margin-top: 35px;
+         }
+            
+        .shopper{
+        font-size: 35px;
+        }
+            
+        .details~span{
+         color: gray;
+         margin-top: 15px;
+         display: block;
+        }
+
+
+        .star{
+            color: goldenrod;
+        }
+    </style>
+
+</head>
+
+<body class="container-fluid">
+    <header class="d-flex">
+        <img class="m-3" src="public/images/Eduport.png" height="45px" width="150px">
+
+        <div class="dropdown mt-4">
+            <a class="btn btn-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                style="background-color: rgb(201, 237, 237);"">
+             <span class=" bi bi-grid text-primary">
+                Category
+                </span>
+            </a>
+
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Devlopment</a></li>
+                <li><a class="dropdown-item" href="#">Design</a></li>
+                <li><a class="dropdown-item" href="#">Marketing</a></li>
+                <li><a class="dropdown-item" href="#">Music</a></li>
+                <li><a class="dropdown-item" href="#">Lifestyle</a></li>
+                <li><a class="dropdown-item" href="#">IT and Software</a></li>
+                <li><a class="dropdown-item" href="#">Personal Devlopment</a></li>
+                <li><a class="dropdown-item" href="#">Health and Fitness</a></li>
+                <li><a class="dropdown-item" href="#">Teaching</a></li>
+                <li><a class="dropdown-item" href="#">Social Science</a></li>
+                <li><a class="dropdown-item" href="#">Math and Logic</a></li>
+            </ul>
+        </div>
+
+
+
+        <nav class="d-flex" width="300px">
+            <div class="dropdown m-4">
+                <a class="dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                    style="text-decoration: none; margin-left: 50px;">
+                    <span class="drop text-primary">
+                        Demos
+                    </span>
+                </a>
+
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Home Default</a></li>
+                    <li><a class="dropdown-item" href="#">Home Education</a></li>
+                    <li><a class="dropdown-item" href="#">Home Academy</a></li>
+                    <li><a class="dropdown-item" href="#">Home Course</a></li>
+                    <li><a class="dropdown-item" href="#">Home University</a></li>
+                    <li><a class="dropdown-item" href="#">Home Kindergarten</a></li>
+                    <li><a class="dropdown-item" href="#">Home Landing</a></li>
+                    <li><a class="dropdown-item" href="#">Home Tutor</a></li>
+                    <li><a class="dropdown-item" href="#">Home School</a></li>
+                    <li><a class="dropdown-item" href="#">Home Abroad</a></li>
+                    <li><a class="dropdown-item" href="#">Home Workshop</a></li>
+                </ul>
+            </div>
+
+
+            <div class="dropdown m-4">
+                <a class="dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                    style="text-decoration: none">
+                    <span class="drop">
+                        Pages
+                    </span>
+                </a>
+
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Home Default</a></li>
+                    <li><a class="dropdown-item" href="#">Home Education</a></li>
+                    <li><a class="dropdown-item" href="#">Home Academy</a></li>
+                    <li><a class="dropdown-item" href="#">Home Course</a></li>
+                    <li><a class="dropdown-item" href="#">Home University</a></li>
+                    <li><a class="dropdown-item" href="#">Home Kindergarten</a></li>
+                    <li><a class="dropdown-item" href="#">Home Landing</a></li>
+                    <li><a class="dropdown-item" href="#">Home Tutor</a></li>
+                    <li><a class="dropdown-item" href="#">Home School</a></li>
+                    <li><a class="dropdown-item" href="#">Home Abroad</a></li>
+                    <li><a class="dropdown-item" href="#">Home Workshop</a></li>
+                </ul>
+            </div>
+
+
+
+            <div class="dropdown m-4">
+                <a class="dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                    style="text-decoration: none">
+                    <span class="drop">
+                        Accounts
+                    </span>
+                </a>
+
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Home Default</a></li>
+                    <li><a class="dropdown-item" href="#">Home Education</a></li>
+                    <li><a class="dropdown-item" href="#">Home Academy</a></li>
+                    <li><a class="dropdown-item" href="#">Home Course</a></li>
+                    <li><a class="dropdown-item" href="#">Home University</a></li>
+                    <li><a class="dropdown-item" href="#">Home Kindergarten</a></li>
+                    <li><a class="dropdown-item" href="#">Home Landing</a></li>
+                    <li><a class="dropdown-item" href="#">Home Tutor</a></li>
+                    <li><a class="dropdown-item" href="#">Home School</a></li>
+                    <li><a class="dropdown-item" href="#">Home Abroad</a></li>
+                    <li><a class="dropdown-item" href="#">Home Workshop</a></li>
+                </ul>
+            </div>
+
+
+
+            <div class="dropdown m-4">
+                <a class="dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                    style="text-decoration: none">
+                    <span class="drop">
+                        Megamenu
+                    </span>
+                </a>
+
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Home Default</a></li>
+                    <li><a class="dropdown-item" href="#">Home Education</a></li>
+                    <li><a class="dropdown-item" href="#">Home Academy</a></li>
+                    <li><a class="dropdown-item" href="#">Home Course</a></li>
+                    <li><a class="dropdown-item" href="#">Home University</a></li>
+                    <li><a class="dropdown-item" href="#">Home Kindergarten</a></li>
+                    <li><a class="dropdown-item" href="#">Home Landing</a></li>
+                    <li><a class="dropdown-item" href="#">Home Tutor</a></li>
+                    <li><a class="dropdown-item" href="#">Home School</a></li>
+                    <li><a class="dropdown-item" href="#">Home Abroad</a></li>
+                    <li><a class="dropdown-item" href="#">Home Workshop</a></li>
+                </ul>
+            </div>
+
+            <span class="bi bi-three-dots mt-4">
+
+            </span>
+
+        </nav>
+
+
+        <section class="d-flex">
+            <input type="text" placeholder="Search" class="mt-4" style="margin-left: 100px; border-radius: 5px; height: 40px;">
+            
+
+            <nav class="dropdown">
+
+                <a class="dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" >
+                        <img src="public/images/profile.png" height="45px" style="text-decoration: none; margin-top: 23px; margin-left: 25px;">
+                </a>
+
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#"><span class="bi bi-person-fill"> Edit Profile</span></a></li>
+                  <li><a class="dropdown-item" href="#"><span class="bi bi-settings">Account Settings</a></li>
+                  <li><a class="dropdown-item" href="#"><span>Help</span></a></li>
+                  <li><a class="dropdown-item" href="#"><span>Sign Out</span></a></li>
+                </ul>
+            </nav>
+        </section>
+
+    </header>
+
+    <main>
+        <section class="main">
+            <div>
+                <p class="title">
+                    Limitless learning at <br>
+                    your fingertips
+                </p>
+
+                <p style="margin-top: 10px; margin-left: 40px; font-size: 17px;">
+                    Online learning and teaching marketplace with 5K+ courses & 10M students. Taught by experts to help you acquire new skills.
+                </p>
+
+
+                <span class="tick bi bi-check-circle-fill"> Learn with experts</span>
+                
+                <span class="tick bi bi-check-circle-fill"> Get certificate</span>
+                
+                <span class="tick bi bi-check-circle-fill"> Get membership</span>
+
+                <button class="start mt-4">
+                    GET STARTED
+                </button>
+                
+            </div>
+    
+    
+            <div>
+                <img src="public/images/main.png" alt="">
+            </div>
+        </section>
+        
+
+        <nav>
+                <img src="public/images/brose.png" width="1200px">
+        </nav>
+
+
+        <h3 class="text-center mt-5">Most Popular Courses</h3>
+        <p class="text-center">Choose from hundreds of courses from specialist organizations</p>
+
+
+
+
+        <ul class=" name nav nav-pills">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Web Design</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Devlopment</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Graphic Design</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link " aria-disabled="true">Marketing</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" aria-disabled="true">Finance</a>
+              </li>
+          </ul>
+
+
+
+
+
+
+
+
+          <section style="margin-top: 40px; margin-left: 20px;" class="d-flex">
+
+            <div class="card"style="width: 18rem;">
+                <img src="public/images/card1.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Sketch from A to Z: for app designer</h5>
+                  <p class="card-text">Proposal indulged no do sociable he throwing settling</p>
+                  <span class=" star bi bi-star-fill"> </span>
+                  <span class="star bi bi-star-fill"> </span>
+                  <span class="star bi bi-star-fill"> </span>
+                  <span class="star bi bi-star-fill"> </span>
+                  <span class="star bi bi-star"> </span>4.0/5.0
+                  
+                  <hr>
+
+                  <span class="bi bi-clock">
+                    12hr 56mins
+                  </span>
+
+                  <span class="bi bi-grid-fill" style="margin-left: 20px;">
+                    15 classes
+                  </span>
+                </div>
+              </div>
+
+              <div class="card"style="width: 18rem;">
+                <img src="public/images/PS.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Graphic Design Masterclass</h5><br>
+                  <p class="card-text">Rooms oh fully taken by worse do Points afraid but may end</p>
+                  <span class=" star bi bi-star-fill"> </span>
+                  <span class="star bi bi-star-fill"> </span>
+                  <span class="star bi bi-star-fill"> </span>
+                  <span class="star bi bi-star-fill"> </span>
+                  <span class="star bi bi-star"> </span>4.0/5.0
+                  
+                  <hr>
+
+                  <span class="bi bi-clock">
+                    12hr 56mins
+                  </span>
+
+                  <span class="bi bi-grid-fill" style="margin-left: 20px;">
+                    15 classes
+                  </span>
+                </div>
+              </div>
+
+
+              <div class="card"style="width: 18rem;">
+                <img src="public/images/3.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Create a Design System in Figma</h5>
+                  <p class="card-text">Rooms oh fully taken by worse do. Points afraid but may end</p>
+                  <span class=" star bi bi-star-fill"> </span>
+                  <span class="star bi bi-star-fill"> </span>
+                  <span class="star bi bi-star-fill"> </span>
+                  <span class="star bi bi-star-fill"> </span>
+                  <span class="star bi bi-star"> </span>4.0/5.0
+                  
+                  <hr>
+
+                  <span class="bi bi-clock">
+                    12hr 56mins
+                  </span>
+
+                  <span class="bi bi-grid-fill" style="margin-left: 20px;">
+                    15 classes
+                  </span>
+                </div>
+              </div>
+
+
+
+              <div class="card"style="width: 18rem;">
+                <img src="public/images/4.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Deep Learning with React-Native</h5>
+                  <p class="card-text">Far advanced settling say finished raillery. Offered chiefly</p>
+                  <span class=" star bi bi-star-fill"> </span>
+                  <span class="star bi bi-star-fill"> </span>
+                  <span class="star bi bi-star-fill"> </span>
+                  <span class="star bi bi-star-fill"> </span>
+                  <span class="star bi bi-star"> </span>4.0/5.0
+                  
+                  <hr>
+
+                  <span class="bi bi-clock">
+                    12hr 56mins
+                  </span>
+
+                  <span class="bi bi-grid-fill" style="margin-left: 20px;">
+                    15 classes
+                  </span>
+                </div>
+              </div>
+
+          </section>
+
+
+          <section style="margin-top: 40px; margin-left: 20px;" class="d-flex">
+            <div class="card"style="width: 18rem;">
+                <img src="public/images/card1.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Sketch from A to Z: for app designer</h5>
+                  <p class="card-text">Proposal indulged no do sociable he throwing settling</p>
+                  <span class=" star bi bi-star-fill"> </span>
+                  <span class="star bi bi-star-fill"> </span>
+                  <span class="star bi bi-star-fill"> </span>
+                  <span class="star bi bi-star-fill"> </span>
+                  <span class="star bi bi-star"> </span>4.0/5.0
+                  
+                  <hr>
+
+                  <span class="bi bi-clock">
+                    12hr 56mins
+                  </span>
+
+                  <span class="bi bi-grid-fill" style="margin-left: 20px;">
+                    15 classes
+                  </span>
+                </div>
+              </div>
+
+              <div class="card"style="width: 18rem;">
+                <img src="public/images/PS.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Graphic Design Masterclass</h5><br>
+                  <p class="card-text">Rooms oh fully taken by worse do Points afraid but may end</p>
+                  <span class=" star bi bi-star-fill"> </span>
+                  <span class="star bi bi-star-fill"> </span>
+                  <span class="star bi bi-star-fill"> </span>
+                  <span class="star bi bi-star-fill"> </span>
+                  <span class="star bi bi-star"> </span>4.0/5.0
+                  
+                  <hr>
+
+                  <span class="bi bi-clock">
+                    12hr 56mins
+                  </span>
+
+                  <span class="bi bi-grid-fill" style="margin-left: 20px;">
+                    15 classes
+                  </span>
+                </div>
+              </div>
+
+
+              <div class="card"style="width: 18rem;">
+                <img src="public/images/3.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Create a Design System in Figma</h5>
+                  <p class="card-text">Rooms oh fully taken by worse do. Points afraid but may end</p>
+                  <span class=" star bi bi-star-fill"> </span>
+                  <span class="star bi bi-star-fill"> </span>
+                  <span class="star bi bi-star-fill"> </span>
+                  <span class="star bi bi-star-fill"> </span>
+                  <span class="star bi bi-star"> </span>4.0/5.0
+                  
+                  <hr>
+
+                  <span class="bi bi-clock">
+                    12hr 56mins
+                  </span>
+
+                  <span class="bi bi-grid-fill" style="margin-left: 20px;">
+                    15 classes
+                  </span>
+                </div>
+              </div>
+
+
+
+              <div class="card"style="width: 18rem;">
+                <img src="public/images/4.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Deep Learning with React-Native</h5>
+                  <p class="card-text">Far advanced settling say finished raillery. Offered chiefly</p>
+                  <span class=" star bi bi-star-fill"> </span>
+                  <span class="star bi bi-star-fill"> </span>
+                  <span class="star bi bi-star-fill"> </span>
+                  <span class="star bi bi-star-fill"> </span>
+                  <span class="star bi bi-star"> </span>4.0/5.0
+                  
+                  <hr>
+
+                  <span class="bi bi-clock">
+                    12hr 56mins
+                  </span>
+
+                  <span class="bi bi-grid-fill" style="margin-left: 20px;">
+                    15 classes
+                  </span>
+                </div>
+              </div>
+          </section>
+    </main>
+
+
+
+
+    <footer>
+
+        <div>
+              <div class="shopper">
+                <img src="public/images/Eduport.png" alt="">
+              </div>
+
+              <p style="font-size: 14px; color: gray;">
+                Eduport education theme, built specifically <br> for the education centers <br>which is dedicated to teaching and involve learners.
+              </p>
+            
+            <div class="shashi" style="font-size: 20px;">
+                <span class="bi bi-facebook"></span>
+                <span class="bi bi-instagram"></span>
+                <span class="bi bi-twitter"></span>
+                <span class="bi bi-youtube"></span>
+                <span class="bi bi-github"></span>
+            </div>
+        </div>
+        
+        
+        <div>
+             <div class="details">
+                Company
+             </div>
+                 <span>Contact us</span>
+                <span>About us</span>
+                <span>News </span>
+                <span>Library </span>
+                <span>Career</span>
+        </div>
+        
+        
+        <div>
+            <div class="details">
+                SHOP
+             </div>
+                <span>Comics</span>
+                <span>Adventures and action</span>
+                <span>Romance</span>
+                <span>Drama</span>
+                <span>Discounts</span>
+        </div>
+        
+        
+        <div>
+            <div class="details">
+                COMPANY
+             </div>
+        
+                <span>Our story</span>
+                <span>Careers</span>
+                <span>Terms and Conditions</span>
+                <span>Privacy & Cookie policy</span>
+        </div>
+
+        </footer>
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>
